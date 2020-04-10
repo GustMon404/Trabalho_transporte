@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>tabelas</title>
+		<meta charset = "utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	</head>
+	<body>
+		<div class = "container">
+			<table class="bordered centered highlight responsive-table">
+				<thead>
+					<tr>
+						<th>Veiculo</th>
+						<th>placa</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for veiculos in veiculo %}
+					<tr onclick="location.href = '/veiculo/informacoes/{{veiculos.id}}';" style="cursor: pointer;">
+						<td>{{veiculos.descricao}}</td>
+						<td>{{veiculos.placa}}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

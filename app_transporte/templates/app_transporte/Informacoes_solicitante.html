@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Informações</title>
+		<meta charset = "utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	</head>
+	<body>
+		<div class = "container">
+			<table class="bordered centered highlight responsive-table">
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>Origem</th>
+						<th>Destino</th>
+						<th>Data/Hora</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>{{solicitacao.solicitante}}</td>
+						<td>{{solicitacao.origem}}</td>
+						<td>{{solicitacao.destino}}</td>
+						<td>{{solicitacao.data_hora}}</td>
+					</tr>
+				</tbody>
+		</div>
+		</table>
+	</body>
+</html>

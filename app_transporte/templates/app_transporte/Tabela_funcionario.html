@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>tabelas</title>
+		<meta charset = "utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	</head>
+	<body>
+		<div class = "container">
+			<table class="bordered centered highlight responsive-table">
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>Departamento</th>
+						<th>Cargo</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for colaborador in funcionario %}
+					<tr onclick="location.href = '/funcionario/informacoes/{{colaborador.id}}';" style="cursor: pointer;">
+						<td>{{colaborador.nome}}</td>
+						<td>{{colaborador.departamento}}</td>
+						<td>{{colaborador.cargo}}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

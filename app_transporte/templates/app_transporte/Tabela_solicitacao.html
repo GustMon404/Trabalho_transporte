@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>tabelas</title>
+		<meta charset = "utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	</head>
+	<body>
+		<div class = "container">
+			<table class="bordered centered highlight responsive-table">
+				<thead>
+					<tr>
+						<th>Solicitante</th>
+						<th>Data/Hora</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for solicitar in solicitacao %}
+					<tr onclick="location.href = '/solicitacao/informacoes/{{solicitar.id}}';" style="cursor: pointer;">
+						<td> <a href = "/funcionario/informacoes/{{solicitar.solicitante.id}}">{{solicitar.solicitante}}</a></td>
+						<td>{{solicitar.data_hora}}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
